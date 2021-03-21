@@ -1,3 +1,5 @@
+@import 'src/assets/scss/modules/_theme.scss';
+
 .navigation {
   height: 96px;
   width: 100%;
@@ -46,7 +48,7 @@
   }
 
   .item.active {
-    border-bottom-color: #574D68;
-    color: #A38560;
+    border-bottom-color: $purple;
+    color: $dark-brown;
   }
 }

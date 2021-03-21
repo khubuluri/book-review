@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/modules/_theme.scss';
 
 //----------------------------------*\
 // Fonts
@@ -11,7 +12,7 @@ body {
   font-family: $primary_font;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: $font_color;
 }
 
 //----------------------------------*\
@@ -23,9 +24,9 @@ html, body {
 
 body {
   margin: 0;
-  background: #F2E86D; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F2E86D, #C6A15B); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F2E86D, #C6A15B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $yellow; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $yellow, $light-brown); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $yellow, $light-brown); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
