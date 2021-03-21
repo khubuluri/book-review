@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+//----------------------------------*\
+// Fonts
+//----------------------------------*/
+@import 'assets/scss/modules/_fonts.scss';
+// primary font
+$primary_font: 'Open Sans', sans-serif;
+
+body {
+  font-family: $primary_font;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+//----------------------------------*\
+// Main Styling
+//----------------------------------*/
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: #F2E86D; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F2E86D, #C6A15B); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F2E86D, #C6A15B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+:focus {
+  outline: none;
+  border: 0;
+}
+
+//----------------------------------*\
+// Custom Styling
+//----------------------------------*/
+
+.container-fluid {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+

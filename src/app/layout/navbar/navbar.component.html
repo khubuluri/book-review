@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav class="navigation">
+  <div class="container-fluid">
+    <div class="app-name">
+      BookApp
+    </div>
+    <div class="nav-links">
+      <ul class="item-list">
+        <li class="item" routerLink="/book" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Main
+          Page
+        </li>
+        <li class="item" routerLink="/book/new" [routerLinkActive]="'active'">Add Book</li>
+      </ul>
+    </div>
+  </div>
+</nav>
