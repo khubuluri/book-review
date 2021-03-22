@@ -8,6 +8,7 @@ import {EditBookComponent} from './edit-book/edit-book.component';
 
 import {CommonModule} from '@angular/common';
 import {BookRoutingModule} from './book-routing.module';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import {BookRoutingModule} from './book-routing.module';
     NewBookComponent,
     EditBookComponent
   ],
-  imports: [CommonModule, BookRoutingModule]
+  imports: [CommonModule, BookRoutingModule, SharedModule]
 })
 export class BookModule {
 }
