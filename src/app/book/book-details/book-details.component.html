@@ -2,7 +2,9 @@
   <div class="main-body">
     <section class="left-col">
       <div class="cover">
-        <img [src]="book.coverUrl ? book.coverUrl : 'assets/images/no-book-cover.jpg'" alt="book-cover">
+        <img [src]="book.coverUrl"
+             onerror="this.src='assets/images/no-book-cover.jpg'"
+             alt="book-cover">
       </div>
       <div class="action">
         <p-menu [model]="items" [style]="{width: '100%'}"></p-menu>

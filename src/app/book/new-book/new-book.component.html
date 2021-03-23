@@ -1,1 +1,71 @@
-<p>new-book works!</p>
+<div class="form-wrapper">
+  <h1 style="font-size: 2rem">New Book</h1>
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <h3>Main Info</h3>
+    <div class="p-fluid p-grid">
+
+      <div class="p-col-3">
+        <img style="width:100%"
+             class="cover"
+             [src]="bookForm.get('coverUrl').value "
+             onerror="this.src='assets/images/no-book-cover.jpg'"
+             alt="book cover">
+        <div class="p-field p-col-12">
+          <label for="coverUrl">Cover Url</label>
+          <input formControlName="coverUrl" id="coverUrl" type="text" pInputText>
+        </div>
+      </div>
+      <div class="p-col-9">
+        <div class="p-field p-col-12">
+          <label for="title">Title*</label>
+          <input formControlName="title" id="title" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12">
+          <label for="author">Author*</label>
+          <input formControlName="author" id="author" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12">
+          <label for="description">Description*</label>
+          <textarea formControlName="description" id="description" rows="10" pInputTextarea></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>Extra Details</h3>
+    <div class="p-fluid p-grid">
+      <div class="p-field p-col-6">
+        <label for="publisher">Publisher*</label>
+        <input formControlName="publisher" id="publisher" type="text" pInputText>
+      </div>
+      <div class="p-field p-col-6">
+        <label for="isbn">ISBN*</label>
+        <input formControlName="ISBN" id="isbn" type="text" pInputText>
+      </div>
+      <div class="p-field p-col-4">
+        <label>Release Year*</label>
+        <p-inputNumber formControlName="releaseYear" inputId="releaseYear"></p-inputNumber>
+      </div>
+      <div class="p-field p-col-3 p-offset-1">
+        <label class="p-mb-3"> Rating*</label>
+        <p-rating formControlName="rating" [cancel]="false"></p-rating>
+      </div>
+      <div class="p-field p-col-3">
+        <label>Total Pages</label>
+        <p-inputNumber formControlName="totalPages" inputId="totalPages"></p-inputNumber>
+      </div>
+
+    </div>
+
+    <div class="action p-mt-3">
+      <button pButton pRipple type="button" label="Cancel" icon="pi pi-times" class="p-button-danger p-mr-2"
+              (click)="onCancel()"></button>
+      <p-button type="submit" label="Submit" icon="pi pi-check"></p-button>
+    </div>
+  </form>
+
+  <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"
+                   rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+</div>

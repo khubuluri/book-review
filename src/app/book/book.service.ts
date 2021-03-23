@@ -29,4 +29,11 @@ export class BookService {
     this.books[index] = book;
   }
 
+  addBook(book: Book): number {
+    this.books.push(book);
+
+    // Return index of last book
+    return this.books.length - 1;
+  }
+
 }

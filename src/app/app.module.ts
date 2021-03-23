@@ -10,12 +10,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     NavbarComponent,
-
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
