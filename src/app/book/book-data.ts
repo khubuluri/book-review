@@ -24,7 +24,7 @@ export const books: Book[] = [
     ISBN: '9786050431773',
     releaseYear: 2016,
     rating: 5,
-  },  {
+  }, {
     title: 'Adventure of Don Quixote',
     coverUrl: 'https://images-na.ssl-images-amazon.com/images/I/41JKGW9P6AL._SX372_BO1,204,203,200_.jpg',
     description: 'Don Quixote, fully titled The Ingenious Gentleman Don Quixote of La Mancha (Spanish: El ingenioso hidalgo don Quijote de la Mancha), is a Spanish novel by Miguel de Cervantes Saavedra. Published in two volumes, in 1605 and 1615, Don Quixote is considered one of the most influential works of literature from the Spanish Golden Age and the entire Spanish literary canon. As a founding work of modern Western literature and one of the earliest canonical novels, it regularly appears high on lists of the greatest works of fiction ever published, such as the Bokklubben World Library collection that cites Don Quixote as authors\' choice for the "best literary work ever written".\n' +
@@ -35,7 +35,7 @@ export const books: Book[] = [
     ISBN: '9786050431773',
     releaseYear: 2016,
     rating: 5,
-  },  {
+  }, {
     title: 'Adventure of Don Quixote',
     coverUrl: 'https://images-na.ssl-images-amazon.com/images/I/41JKGW9P6AL._SX372_BO1,204,203,200_.jpg',
     description: 'Don Quixote, fully titled The Ingenious Gentleman Don Quixote of La Mancha (Spanish: El ingenioso hidalgo don Quijote de la Mancha), is a Spanish novel by Miguel de Cervantes Saavedra. Published in two volumes, in 1605 and 1615, Don Quixote is considered one of the most influential works of literature from the Spanish Golden Age and the entire Spanish literary canon. As a founding work of modern Western literature and one of the earliest canonical novels, it regularly appears high on lists of the greatest works of fiction ever published, such as the Bokklubben World Library collection that cites Don Quixote as authors\' choice for the "best literary work ever written".\n' +

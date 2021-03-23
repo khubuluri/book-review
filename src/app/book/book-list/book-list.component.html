@@ -8,6 +8,9 @@
       <p class="author">{{book.author}}</p>
     </div>
     <div class="book-rating">
+      <p-rating [ngModel]="book.rating" readonly="true" [cancel]="false"></p-rating>
+      <span>({{book.rating}}/5)</span>
+      <span>{{book.reviews ? book.reviews.length : 0}} reviews</span>
     </div>
   </div>
 </div>

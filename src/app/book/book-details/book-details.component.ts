@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Book} from '../interfaces';
 import {BookService} from '../book.service';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-book-details',
@@ -13,7 +14,14 @@ export class BookDetailsComponent implements OnInit {
   book: Book = null;
   bookId: number = null;
 
+  items: MenuItem[];
+
   constructor(private route: ActivatedRoute, private router: Router, private bookService: BookService) {
+    this.items = [
+      {label: 'Edit Book', icon: 'pi pi-fw pi-pencil'},
+      {label: 'Add Note', icon: 'pi pi-fw pi-bookmark'},
+      {label: 'Delete Book', icon: 'pi pi-fw pi-times'},
+    ];
   }
 
   ngOnInit(): void {

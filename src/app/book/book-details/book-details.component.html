@@ -1,8 +1,60 @@
 <div class="">
   <div class="main-body">
-
+    <section class="left-col">
+      <div class="cover">
+        <img [src]="book.coverUrl ? book.coverUrl : 'assets/images/no-book-cover.jpg'" alt="book-cover">
+      </div>
+      <div class="action">
+        <p-menu [model]="items" [style]="{width: '100%'}"></p-menu>
+      </div>
+      <div class="notes" *ngIf="book.notes?.length > 0">
+        <h3 style="margin: 0 0 8px; padding-left: 10px">Notes</h3>
+        <div *ngFor="let note of book.notes" class="note">
+          {{note}}
+        </div>
+      </div>
+    </section>
+    <section class="right-col">
+      <div class="details">
+        <h1 class="title">{{book.title}}</h1>
+        <h3 class="author">{{book.author | titlecase}}</h3>
+        <div class="book-rating" style="padding-left: 0">
+          <p-rating [ngModel]="book.rating" readonly="true" [cancel]="false"></p-rating>
+          <span>({{book.rating}}/5)</span>
+          <span>{{book.reviews ? book.reviews.length : 0}} reviews</span>
+        </div>
+        <hr>
+        <p class="description">{{book.description}}</p>
+      </div>
+      <hr>
+      <div class="publisher-info">
+        <dl class="info-list">
+          <dt>Publisher:</dt>
+          <dd>{{book.publisher}}</dd>
+          <dt *ngIf="book.releaseYear">Release:</dt>
+          <dd *ngIf="book.releaseYear">{{book.releaseYear}}</dd>
+          <dt>ISBN:</dt>
+          <dd>{{book.ISBN}}</dd>
+        </dl>
+      </div>
+      <hr>
+      <div class="review-list" *ngIf="book.reviews?.length > 0">
+        <h2>Reviews</h2>
+        <div *ngFor="let review of book.reviews" class="review">
+          <div class="review-head">
+            <div class="initials">{{'MC' | uppercase}}</div>
+            <span class="review-author">{{review.fullName | titlecase}}</span>
+          </div>
+          <p class="review-text">
+            {{review.review}}
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
+
   <div class="notes">
 
   </div>
+
 </div>
