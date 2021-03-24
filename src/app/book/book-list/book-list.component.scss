@@ -9,11 +9,12 @@
 }
 
 .book-card {
-  width: 300px;
+  width: 280px;
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
   margin: 16px 10px;
+  transition: 0.4s;
 
   .book-cover {
     img {
@@ -42,6 +43,11 @@
     }
   }
 
+}
+
+.book-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
 }
 
 ::ng-deep {

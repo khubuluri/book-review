@@ -22,11 +22,14 @@ export class BookService {
   }
 
   removeBook(index: number) {
-    this.books.splice(index);
+    this.books.splice(index, 1);
   }
 
   editBook(index: number, book: Book) {
-    this.books[index] = book;
+    this.books[index] = {
+      ...this.books[index],
+      ...book
+    };
   }
 
   addBook(book: Book): number {
@@ -36,4 +39,12 @@ export class BookService {
     return this.books.length - 1;
   }
 
+  addNoteToBook(bookId: number, note: string): Book {
+    const book = this.books[bookId];
+    if (!book.notes) {
+      book.notes = [];
+    }
+    book.notes.push(note);
+    return book;
+  }
 }

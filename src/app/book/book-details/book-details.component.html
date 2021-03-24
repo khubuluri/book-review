@@ -33,24 +33,17 @@
         <dl class="info-list">
           <dt>Publisher:</dt>
           <dd>{{book.publisher}}</dd>
-          <dt *ngIf="book.releaseYear">Release:</dt>
-          <dd *ngIf="book.releaseYear">{{book.releaseYear}}</dd>
+          <dt>Release:</dt>
+          <dd>{{book.releaseYear}}</dd>
           <dt>ISBN:</dt>
           <dd>{{book.ISBN}}</dd>
+          <dt *ngIf="book.totalPages">TotalPages:</dt>
+          <dd *ngIf="book.totalPages">{{book.totalPages}}</dd>
         </dl>
       </div>
-      <hr>
+      <hr *ngIf="book.reviews?.length > 0">
       <div class="review-list" *ngIf="book.reviews?.length > 0">
-        <h2>Reviews</h2>
-        <div *ngFor="let review of book.reviews" class="review">
-          <div class="review-head">
-            <div class="initials">{{'MC' | uppercase}}</div>
-            <span class="review-author">{{review.fullName | titlecase}}</span>
-          </div>
-          <p class="review-text">
-            {{review.review}}
-          </p>
-        </div>
+        <app-book-reviews [reviews]="book.reviews"></app-book-reviews>
       </div>
     </section>
   </div>
@@ -60,3 +53,21 @@
   </div>
 
 </div>
+
+
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"
+                 rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+
+<p-dialog header="Add Note" [(visible)]="noteDialogVisible" [modal]="true" [style]="{width: '700px'}"
+          [baseZIndex]="10000"
+          [draggable]="false" [resizable]="false">
+  <div class="p-fluid p-grid">
+    <div class="p-field p-col-12">
+      <label>New Note</label>
+      <textarea aria-label="" [(ngModel)]="newNote" #note rows="10" pInputTextarea required></textarea>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-plus" (click)="addNote()" label="Add" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>

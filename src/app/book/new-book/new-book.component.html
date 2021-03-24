@@ -1,5 +1,5 @@
 <div class="form-wrapper">
-  <h1 style="font-size: 2rem">New Book</h1>
+  <h1 style="font-size: 2rem">{{editMode ? 'Book Edit' : 'New Book'}}</h1>
   <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
     <h3>Main Info</h3>
     <div class="p-fluid p-grid">
@@ -46,7 +46,7 @@
       </div>
       <div class="p-field p-col-4">
         <label>Release Year*</label>
-        <p-inputNumber formControlName="releaseYear" inputId="releaseYear"></p-inputNumber>
+        <p-inputNumber formControlName="releaseYear" inputId="releaseYear" [useGrouping]="false"></p-inputNumber>
       </div>
       <div class="p-field p-col-3 p-offset-1">
         <label class="p-mb-3"> Rating*</label>

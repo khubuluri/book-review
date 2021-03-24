@@ -9,13 +9,15 @@ import {CommonModule} from '@angular/common';
 import {BookRoutingModule} from './book-routing.module';
 import {SharedModule} from '../shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {BookReviewsComponent} from './book-details/book-reviews/book-reviews.component';
 
 @NgModule({
   declarations: [
     BookListComponent,
     BookDetailsComponent,
     NewBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    BookReviewsComponent
   ],
   imports: [CommonModule, BookRoutingModule, SharedModule, ReactiveFormsModule]
 })

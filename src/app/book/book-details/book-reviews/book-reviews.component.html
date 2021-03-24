@@ -1,0 +1,10 @@
+<h2>Reviews</h2>
+<div *ngFor="let review of reviews" class="review">
+  <div class="review-head">
+    <div class="initials">{{getInitials(review.fullName) | uppercase}}</div>
+    <span class="review-author">{{review.fullName | titlecase}}</span>
+  </div>
+  <p class="review-text">
+    {{review.review}}
+  </p>
+</div>
